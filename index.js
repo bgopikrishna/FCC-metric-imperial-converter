@@ -6,7 +6,9 @@ const helmet = require('helmet');
 
 const app = express();
 
-app.use(helmet());
+app.use(helmet.noSniff());
+app.use(helmet.xssFilter());
+
 app.use(express.json());
 
 app.use(cors({ optionSuccessStatus: 200 }));

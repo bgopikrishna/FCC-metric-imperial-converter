@@ -34,7 +34,7 @@ router.get('/', (req, res) => {
     let evaluatedValue;
 
     try {
-        evaluatedValue = eval(value);
+        evaluatedValue = evaluate(value);
         console.log(evaluatedValue);
     } catch (err) {
         console.error(err.message);
